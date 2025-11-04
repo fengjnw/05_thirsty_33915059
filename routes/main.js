@@ -4,8 +4,8 @@ const router = express.Router();
 
 // Data to be sent to templates
 var shopData = {
-    shopName: "The Thirsty Student",
-    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
+    shop_name: "The Thirsty Student",
+    product_categories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
     shops: [
         { location: "Lewisham", manager: "Anna Smith", address: "123 Main Street" },
         { location: "Greenwich", manager: "John Doe", address: "456 Elm Street" },
@@ -27,7 +27,6 @@ router.get("/search", (req, res) => {
 });
 
 router.get('/search_result', function (req, res) {
-    // TODO: search in the database
     res.send("You searched for " + req.query.search_text + " in " + req.query.category);
 });
 
@@ -37,6 +36,22 @@ router.get("/register", (req, res) => {
 
 router.post("/registered", (req, res) => {
     res.send(' Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + ' We will send an email to you at ' + req.body.email);
+});
+
+router.get("/survey", (req, res) => {
+    res.render("survey.ejs", shopData);
+});
+
+router.post("/survey_result", (req, res) => {
+    res.render("survey_result.ejs", {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        age: req.body.age,
+        consumed_categories: req.body.consumed_categories,
+        is_student: req.body.is_student,
+        shop_name: shopData.shop_name
+    });
 });
 
 // Export the router object so index.js can access it

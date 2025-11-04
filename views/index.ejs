@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        <%=shopName%>
+        <%=shop_name%>
     </title>
     <link rel="stylesheet" href="/styles.css">
 </head>
@@ -12,12 +12,12 @@
     <%- include('partials/header') %>
 
         <div class="container">
-            <h1>Welcome to <%=shopName%> Shop</h1>
+            <h1>Welcome to <%=shop_name%> Shop</h1>
             <h2>Here are some things that we sell:</h2>
             <ul>
-                <% for(let i=0; i < productCategories.length; i++) { %>
+                <% for(let i=0; i < product_categories.length; i++) { %>
                     <li>
-                        <%= productCategories[i] %>
+                        <%= product_categories[i] %>
                     </li>
                     <% } %>
             </ul>

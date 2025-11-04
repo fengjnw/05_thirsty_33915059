@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=shop_name%> Survey Results
+    </title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+        <div class="container">
+            <h1>Thank you for your feedback, <%= first_name %>
+                    <%= last_name %>!</h1>
+            <p>Your first name: <%= first_name %>
+            </p>
+            <p>Your last name: <%= last_name %>
+            </p>
+            <p>Your email: <%= email %>
+            </p>
+            <p>Your age: <%= age %>
+            </p>
+            <p>You consume: <%= consumed_categories %>
+            </p>
+            <p>Your student status: <%= is_student ? 'Yes' : 'No' %>
+            </p>
+        </div>
+</body>
+
+</html>
