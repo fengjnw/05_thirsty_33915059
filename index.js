@@ -12,6 +12,9 @@ app.set('view engine', 'ejs');
 // Set up the body parser 
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files (stylesheets, etc.) from the "public" directory
+app.use(express.static('public'));
+
 // Load the route handlers
 const mainRoutes = require("./routes/main");
 app.use('/', mainRoutes);

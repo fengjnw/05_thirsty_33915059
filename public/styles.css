@@ -1,0 +1,101 @@
+html,
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    background: #e8e8e8;
+    color: #1c1c1c;
+}
+
+/* page container */
+.container {
+    max-width: 760px;
+    margin: 28px auto;
+    padding: 16px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: #33333333 0px 4px 12px -4px;
+}
+
+h1 {
+    font-size: 1.25rem;
+    margin: 0 0 8px;
+    color: #1e40af;
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 0 0 10px;
+    color: #2563eb;
+}
+
+ul {
+    padding-left: 1rem;
+    color: #000000;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #e6e8eb;
+    border-radius: 4px
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 10px 14px;
+    margin-top: 12px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* navigation bar */
+.site-header {
+    background: #2563eb;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.site-header .inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.logo {
+    font-weight: 700
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 0.95rem
+}
+
+.nav a:hover {
+    text-decoration: underline
+}
+
+/* responsive design */
+@media (max-width:520px) {
+    .container {
+        margin: 16px;
+        padding: 12px
+    }
+
+    .site-header .inner {
+        padding: 0 10px
+    }
+}
