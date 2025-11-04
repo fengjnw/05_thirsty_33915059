@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=shopName%> Shop - Search
+    </title>
+</head>
+
+<body>
+    <h1>Welcome to <%=shopName%> Shop</h1>
+    <h2>Search what you want</h2>
+    <form action="/search_result" method="GET">
+        <label for="search_text">Name:</label>
+        <input id="search_text" type="text" name="search_text">
+        <label for="category">Category:</label>
+        <input id="category" type="text" name="category">
+        <input type="submit" value="OK">
+    </form>
+</body>
+
+</html>
