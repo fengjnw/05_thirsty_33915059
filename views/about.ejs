@@ -14,6 +14,19 @@
         <div class="container">
             <h1>About <%=shopName%> Shop</h1>
             <p>We sell all sorts of drinks</p>
+            <h2>Our Shops</h2>
+            <ul>
+                <% for(let i=0; i < shops.length; i++) { %>
+                    <li>
+                        <strong>Location:</strong>
+                        <%= shops[i].location %>,
+                            <strong>Manager:</strong>
+                            <%= shops[i].manager %>,
+                                <strong>Address:</strong>
+                                <%= shops[i].address %>
+                    </li>
+                    <% } %>
+            </ul>
         </div>
 </body>
 

@@ -5,7 +5,12 @@ const router = express.Router();
 // Data to be sent to templates
 var shopData = {
     shopName: "The Thirsty Student",
-    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"]
+    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
+    shops: [
+        { location: "Lewisham", manager: "Anna Smith", address: "123 Main Street" },
+        { location: "Greenwich", manager: "John Doe", address: "456 Elm Street" },
+        { location: "New Cross", manager: "Karen Johnson", address: "789 Oak Street" }
+    ]
 }
 
 // Handle the main routes
