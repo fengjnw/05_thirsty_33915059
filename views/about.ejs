@@ -18,12 +18,15 @@
             <ul>
                 <% for(let i=0; i < shops.length; i++) { %>
                     <li>
-                        <strong>Location:</strong>
-                        <%= shops[i].location %>,
-                            <strong>Manager:</strong>
-                            <%= shops[i].manager %>,
-                                <strong>Address:</strong>
-                                <%= shops[i].address %>
+                        <strong>
+                            <%= shops[i].location %> Shop
+                        </strong>
+                        <ul>
+                            <li>Manager: <%= shops[i].manager %>
+                            </li>
+                            <li>Address: <%= shops[i].address %>
+                            </li>
+                        </ul>
                     </li>
                     <% } %>
             </ul>

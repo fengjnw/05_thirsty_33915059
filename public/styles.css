@@ -33,6 +33,11 @@ ul {
     color: #000000;
 }
 
+ul ul {
+    color: #4b5563;
+    /* muted for second level (manager/address) */
+}
+
 label {
     display: block;
     margin-top: 8px;
