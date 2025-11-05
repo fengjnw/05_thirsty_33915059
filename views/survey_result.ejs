@@ -9,21 +9,25 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
-            <h1>Thank you for your feedback, <%= first_name %>
-                    <%= last_name %>!</h1>
-            <p>Your first name: <%= first_name %>
+            <!-- Thank you message -->
+            <h1>Thank you for your feedback, <%= first %>
+                    <%= last %>!</h1>
+            <!-- Display user information -->
+            <p>Your first name: <%= first %>
             </p>
-            <p>Your last name: <%= last_name %>
+            <p>Your last name: <%= last %>
             </p>
             <p>Your email: <%= email %>
             </p>
             <p>Your age: <%= age %>
             </p>
-            <p>You consume: <%= consumed_categories %>
+            <p>You consumed: <%= consumed_categories %>
             </p>
+            <!-- Use ternary operator to display a message based on student status -->
             <p>Your student status: <%= is_student ? 'Yes' : 'No' %>
             </p>
         </div>

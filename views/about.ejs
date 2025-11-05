@@ -9,26 +9,28 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
             <h1>About <%=shop_name%> Shop</h1>
             <p>We sell all sorts of drinks</p>
             <h2>Our Shops</h2>
             <ul>
-                <% for(let i=0; i < shops.length; i++) { %>
+                <!-- Use forEach to iterate over shops -->
+                <% shops.forEach((shop)=> { %>
                     <li>
                         <strong>
-                            <%= shops[i].location %> Shop
+                            <%= shop.location %> Shop
                         </strong>
                         <ul>
-                            <li>Manager: <%= shops[i].manager %>
+                            <li>Manager: <%= shop.manager %>
                             </li>
-                            <li>Address: <%= shops[i].address %>
+                            <li>Address: <%= shop.address %>
                             </li>
                         </ul>
                     </li>
-                    <% } %>
+                    <% }) %>
             </ul>
         </div>
 </body>

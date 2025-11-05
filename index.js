@@ -1,6 +1,6 @@
 // Setup express and ejs
-var express = require('express')
-var ejs = require('ejs')
+const express = require('express')
+const ejs = require('ejs')
 
 // Create the express application object
 const app = express()

@@ -1,3 +1,4 @@
+/* Global styles */
 html,
 body {
     margin: 0;
@@ -6,16 +7,18 @@ body {
     color: #1c1c1c;
 }
 
-/* page container */
+/* Page container */
 .container {
     max-width: 760px;
     margin: 28px auto;
     padding: 16px;
     background: #fff;
     border-radius: 6px;
+    /* Add subtle shadow */
     box-shadow: #33333333 0px 4px 12px -4px;
 }
 
+/* Headings */
 h1 {
     font-size: 1.25rem;
     margin: 0 0 8px;
@@ -28,28 +31,34 @@ h2 {
     color: #2563eb;
 }
 
+/* Lists items */
 ul {
     padding-left: 1rem;
-    color: #000000;
+    color: #000;
 }
 
+/* Muted for second level items */
 ul ul {
     color: #4b5563;
-    /* muted for second level (manager/address) */
 }
 
+
+/* Form elements */
+/* Labels */
 label {
     display: block;
     margin-top: 8px;
     color: #333;
 }
 
+/* Inline labels */
 label.inline {
     display: inline-block;
     margin-right: 12px;
     color: #4b5563
 }
 
+/* Text inputs */
 input[type="text"] {
     width: 80%;
     padding: 8px;
@@ -57,16 +66,19 @@ input[type="text"] {
     border-radius: 4px
 }
 
+/* Radio buttons */
 input[type="radio"] {
     margin-right: 6px;
     display: inline-block;
 }
 
+/* Checkbox */
 input[type="checkbox"] {
     margin-right: 6px;
     display: inline-block;
 }
 
+/* Submit button */
 input[type="submit"] {
     display: block;
     padding: 10px 14px;
@@ -77,13 +89,15 @@ input[type="submit"] {
     border-radius: 4px;
 }
 
-/* navigation header */
+/* Navigation header */
+/* Background */
 .site-header {
     background: #2563eb;
     color: #fff;
     padding: 10px 0;
 }
 
+/* Inner container in header */
 .site-header .inner {
     max-width: 760px;
     margin: 0 auto;
@@ -93,10 +107,12 @@ input[type="submit"] {
     padding: 0 12px;
 }
 
+/* Logo */
 .logo {
     font-weight: 700
 }
 
+/* Navigation links */
 .nav a {
     color: #fff;
     text-decoration: none;
@@ -104,11 +120,13 @@ input[type="submit"] {
     font-size: 0.95rem
 }
 
+/* Underline on hover */
 .nav a:hover {
     text-decoration: underline
 }
 
-/* responsive design */
+
+/* Responsive design */
 @media (max-width:520px) {
     .container {
         margin: 16px;

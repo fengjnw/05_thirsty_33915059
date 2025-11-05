@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // Data to be sent to templates
-var shopData = {
+const shop_data = {
     shop_name: "The Thirsty Student",
     product_categories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
     shops: [
@@ -11,46 +11,53 @@ var shopData = {
         { location: "Greenwich", manager: "John Doe", address: "456 Elm Street" },
         { location: "New Cross", manager: "Karen Johnson", address: "789 Oak Street" }
     ]
-}
+};
 
 // Handle the main routes
 router.get("/", (req, res) => {
-    res.render("index.ejs", shopData);
+    res.render("index.ejs", shop_data);
 });
 
+// About page route
 router.get("/about", (req, res) => {
-    res.render("about.ejs", shopData);
+    res.render("about.ejs", shop_data);
 });
 
+// Search page route
 router.get("/search", (req, res) => {
-    res.render("search.ejs", shopData);
+    res.render("search.ejs", shop_data);
 });
 
-router.get('/search_result', function (req, res) {
+// Search result route
+router.get('/search_result', (req, res) => {
     res.send("You searched for " + req.query.search_text + " in " + req.query.category);
 });
 
+// Register page route
 router.get("/register", (req, res) => {
-    res.render("register.ejs", shopData);
+    res.render("register.ejs", shop_data);
 });
 
+// Registered feedback route
 router.post("/registered", (req, res) => {
     res.send(' Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + ' We will send an email to you at ' + req.body.email);
 });
 
+// Survey page route
 router.get("/survey", (req, res) => {
-    res.render("survey.ejs", shopData);
+    res.render("survey.ejs", shop_data);
 });
 
+// Survey result page route
 router.post("/survey_result", (req, res) => {
     res.render("survey_result.ejs", {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
+        first: req.body.first,
+        last: req.body.last,
         email: req.body.email,
         age: req.body.age,
         consumed_categories: req.body.consumed_categories,
         is_student: req.body.is_student,
-        shop_name: shopData.shop_name
+        shop_name: shop_data.shop_name
     });
 });
 

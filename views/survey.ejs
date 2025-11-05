@@ -9,23 +9,26 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
             <h1>
                 <%=shop_name%> Shop Survey
             </h1>
+            <!-- Form for user survey -->
             <form method="POST" action="/survey_result">
-                <label for="first_name">First Name:</label>
-                <input id="first_name" type="text" name="first_name" />
-                <label for="last_name">Surname:</label>
-                <input id="last_name" type="text" name="last_name" />
+                <label for="first">First Name:</label>
+                <input id="first" type="text" name="first" />
+                <label for="last">Surname:</label>
+                <input id="last" type="text" name="last" />
                 <label for="email">Email Address:</label>
                 <input id="email" type="text" name="email" />
                 <label for="age">How old are you?</label>
                 <input id="age" type="text" name="age" />
                 <label for="consumed_categories">Which of the following drinks categories do you consume?</label>
-                <% product_categories.forEach(function(category) { %>
+                <!-- Use forEach to iterate over product categories and create radio buttons -->
+                <% product_categories.forEach((category)=> { %>
                     <input type="radio" id="<%= category %>" name="consumed_categories" value="<%= category %>" />
                     <label for="<%= category %>" class="inline">
                         <%= category %>

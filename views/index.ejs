@@ -9,17 +9,19 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
             <h1>Welcome to <%=shop_name%> Shop</h1>
             <h2>Here are some things that we sell:</h2>
             <ul>
-                <% for(let i=0; i < product_categories.length; i++) { %>
+                <!-- Use forEach to iterate over product categories -->
+                <% product_categories.forEach((category)=> { %>
                     <li>
-                        <%= product_categories[i] %>
+                        <%= category %>
                     </li>
-                    <% } %>
+                    <% }) %>
             </ul>
         </div>
 </body>

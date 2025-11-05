@@ -9,11 +9,13 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
             <h1>Register for <%=shop_name%>
             </h1>
+            <!-- Form for user registration -->
             <form method="POST" action="/registered">
                 <label for="first">First Name:</label>
                 <input id="first" type="text" name="first" />

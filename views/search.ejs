@@ -9,11 +9,13 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
-
+        <!-- Use container for the main content -->
         <div class="container">
             <h1>Welcome to <%=shop_name%> Shop</h1>
             <h2>Search what you want</h2>
+            <!-- Form for searching products -->
             <form action="/search_result" method="GET">
                 <label for="search_text">Name:</label>
                 <input id="search_text" type="text" name="search_text">
