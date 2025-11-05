@@ -25,10 +25,10 @@
             </p>
             <p>Your age: <%= age %>
             </p>
-            <p>You consumed: <%= consumed_categories %>
+            <p>You consumed <%= consumed_categories %>
             </p>
             <!-- Use ternary operator to display a message based on student status -->
-            <p>Your student status: <%= is_student ? 'Yes' : 'No' %>
+            <p>You <%= is_student ? 'are' : 'are not' %> a student
             </p>
         </div>
 </body>
