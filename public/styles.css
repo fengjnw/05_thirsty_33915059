@@ -59,7 +59,8 @@ label.inline {
 }
 
 /* Text inputs */
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
     width: 80%;
     padding: 8px;
     border: 1px solid #e6e8eb;
