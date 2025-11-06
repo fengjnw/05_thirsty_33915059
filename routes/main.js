@@ -30,6 +30,7 @@ router.get("/search", (req, res) => {
 
 // Search result route
 router.get('/search_result', (req, res) => {
+    // Display the search parameters
     res.send("You searched for " + req.query.search_text + " in " + req.query.category);
 });
 
@@ -40,6 +41,7 @@ router.get("/register", (req, res) => {
 
 // Registered feedback route
 router.post("/registered", (req, res) => {
+    // Display the form data
     res.send(' Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + ' We will send an email to you at ' + req.body.email);
 });
 
@@ -50,17 +52,9 @@ router.get("/survey", (req, res) => {
 
 // Survey result page route
 router.post("/survey_result", (req, res) => {
-    res.render("survey_result.ejs", {
-        first: req.body.first,
-        last: req.body.last,
-        email: req.body.email,
-        age: req.body.age,
-        consumed_categories: req.body.consumed_categories,
-        is_student: req.body.is_student,
-        shop_name: shop_data.shop_name
-    });
+    // Combine form data with shop data and render the result page
+    res.render("survey_result.ejs", { ...req.body, ...shop_data });
 });
 
 // Export the router object so index.js can access it
 module.exports = router;
-
