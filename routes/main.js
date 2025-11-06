@@ -53,7 +53,7 @@ router.get("/survey", (req, res) => {
 // Survey result page route
 router.post("/survey_result", (req, res) => {
     // Combine form data with shop data and render the result page
-    res.render("survey_result.ejs", { ...req.body, ...shop_data });
+    res.render("survey_result.ejs", { ...req.body, ...shop_data, is_student: req.body.is_student });
 });
 
 // Export the router object so index.js can access it
